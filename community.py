@@ -86,7 +86,7 @@ def register_user():
 
     users.create_user(values.get('username'))
 
-    response = {'message': f'User successfuly created'}
+    response = {'message': 'User successfuly created'}
     return jsonify(response), 201
 
 @app.route("/addPost", methods = ["POST"])
@@ -101,7 +101,7 @@ def post():
 
     users.add_post(values.get('username'), values.get('caption'))
 
-    response = {'message': f'Post successfuly created'}
+    response = {'message': 'Post successfuly created'}
     return jsonify(response), 201
 
 @app.route("/getPost", methods = ["POST"])
@@ -153,7 +153,7 @@ def add_to_community():
         return 'invalid user', 400
 
     users.add_to_community(values.get('leader'), values.get('follower'))
-    response = {'message': f'Successfuly added to community'}
+    response = {'message': 'Successfuly added to community'}
     return jsonify(response), 201
 #Misan was here hahahahahahahahahahahahahahahahahahah
 
@@ -168,3 +168,7 @@ if __name__ == '__main__':
     This is a test for the new branch
     """
     app.run(host='0.0.0.0', port=port)
+
+    """
+    This is development test, Misan Over?
+    """
